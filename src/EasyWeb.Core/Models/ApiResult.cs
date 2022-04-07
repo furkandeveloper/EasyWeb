@@ -4,7 +4,10 @@ using System.Text;
 
 namespace EasyWeb.Core.Models
 {
-    internal class ApiResult
+    /// <summary>
+    /// This is base class of Api Response models. All requests will return in this template. See BaseController for implementation.
+    /// </summary>
+    public class ApiResult : ApiResult<object>
     {
     }
 }
