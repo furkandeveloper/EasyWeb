@@ -26,12 +26,12 @@ namespace EasyWeb.Core.Models
         public virtual TData Data { get; set; }
 
         /// <summary>
-        /// Metadata about response, like pagination page counts or depricated elements etc.
+        /// Metadata about response, like pagination page counts or deprecated elements etc.
         /// </summary>
         public virtual TMeta Meta { get; set; }
 
         /// <summary>
-        /// Message about request. Some unseuccessful requests have message about it.
+        /// Message about request. Some unsuccessful requests have message about it.
         /// </summary>
         public virtual string Message { get; set; }
 
