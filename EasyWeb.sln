@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{212853B2-8D13-4301-BF65-09861E943FE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeb.Core", "src\EasyWeb.Core\EasyWeb.Core.csproj", "{ED1975A7-3211-4D10-A05D-057DDB28DB39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyWeb.Core", "src\EasyWeb.Core\EasyWeb.Core.csproj", "{ED1975A7-3211-4D10-A05D-057DDB28DB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeb.AspNetCore", "src\EasyWeb.AspNetCore\EasyWeb.AspNetCore.csproj", "{0FB294C1-BC53-453E-AA20-F011C9CE768C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{ED1975A7-3211-4D10-A05D-057DDB28DB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED1975A7-3211-4D10-A05D-057DDB28DB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED1975A7-3211-4D10-A05D-057DDB28DB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB294C1-BC53-453E-AA20-F011C9CE768C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB294C1-BC53-453E-AA20-F011C9CE768C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB294C1-BC53-453E-AA20-F011C9CE768C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB294C1-BC53-453E-AA20-F011C9CE768C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{ED1975A7-3211-4D10-A05D-057DDB28DB39} = {212853B2-8D13-4301-BF65-09861E943FE1}
+		{0FB294C1-BC53-453E-AA20-F011C9CE768C} = {212853B2-8D13-4301-BF65-09861E943FE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {450CA51F-C268-4F80-9056-8C46587FEEA2}
