@@ -1,4 +1,5 @@
 ﻿using EasyWeb.Core.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -139,6 +140,22 @@ namespace EasyWeb.AspNetCore.Controllers
                 Message = message,
                 IsUserFriendlyMessage = true
             });
+        }
+
+        /// <summary>
+        /// Creates an <see cref="NotFoundObjectResult"/> that produces a <see cref="StatusCodes.Status404NotFound"/> response.
+        /// </summary>
+        /// <returns>The created <see cref="NotFoundObjectResult"/> for the response.</returns>
+        [NonAction]
+        public override NotFoundObjectResult NotFound(object value)
+        {
+            return base.NotFound(new ApiResult
+            {
+                Success = false,
+                Key = "NotFound",
+                Data = value
+            });
+            return base.NotFound(value);
         }
     }
 }
