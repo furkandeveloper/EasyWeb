@@ -174,5 +174,39 @@ namespace EasyWeb.AspNetCore.Controllers
             });
             return base.Accepted(value);
         }
+
+        /// <summary>
+        /// Creates a <see cref="AcceptedResult"/> object that produces an <see cref="StatusCodes.Status202Accepted"/> response.
+        /// </summary>
+        /// <param name="uri">The URI with the location at which the status of requested content can be monitored.</param>
+        /// <param name="value">The optional content value to format in the entity body; may be null.</param>
+        /// <returns>The created <see cref="AcceptedResult"/> for the response.</returns>
+        [NonAction]
+        public override AcceptedResult Accepted(Uri uri, object value)
+        {
+            return base.Accepted(uri, new ApiResult
+            {
+                Success = true,
+                Key = "Accepted",
+                Data = value
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="AcceptedResult"/> object that produces an <see cref="StatusCodes.Status202Accepted"/> response.
+        /// </summary>
+        /// <param name="uri">The URI with the location at which the status of requested content can be monitored.</param>
+        /// <param name="value">The optional content value to format in the entity body; may be null.</param>
+        /// <returns>The created <see cref="AcceptedResult"/> for the response.</returns>
+        [NonAction]
+        public override AcceptedResult Accepted(string uri, object value)
+        {
+            return base.Accepted(uri, new ApiResult
+            {
+                Success = true,
+                Key = "Accepted",
+                Data = value
+            });
+        }
     }
 }
