@@ -11,7 +11,7 @@ namespace EasyWeb.AspNetCore.Controllers
     public abstract class BaseApiController : ControllerBase
     {
         private const string BadRequestMessage = "An error occurred while executing the operation.";
-        
+
         /// <summary>
         /// Creates an Microsoft.AspNetCore.Mvc.BadRequestObjectResult that produces a Microsoft.AspNetCore.Http.StatusCodes.Status400BadRequest
         /// response.
@@ -50,7 +50,8 @@ namespace EasyWeb.AspNetCore.Controllers
         [NonAction]
         protected virtual BadRequestObjectResult BadRequest(ModelStateDictionary modelState, bool isUserFriendlyMessage)
         {
-            var mainErrors = modelState.Where(x => !string.IsNullOrEmpty(x.Key)).ToDictionary(k => k.Key, v => v.Value.Errors.Select(x => x.ErrorMessage));
+            var mainErrors = modelState.Where(x => !string.IsNullOrEmpty(x.Key))
+                .ToDictionary(k => k.Key, v => v.Value.Errors.Select(x => x.ErrorMessage));
 
             return base.BadRequest(new ApiResult
             {
@@ -107,6 +108,36 @@ namespace EasyWeb.AspNetCore.Controllers
                 Data = error,
                 Key = key,
                 Message = BadRequestMessage
+            });
+        }
+
+        /// <summary>
+        /// Creates an Microsoft.AspNetCore.Mvc.BadRequestObjectResult that produces a Microsoft.AspNetCore.Http.StatusCodes.Status400BadRequest
+        /// response.
+        /// </summary>
+        /// <param name="error">
+        /// An error object to be returned to the client.
+        /// </param>
+        /// <param name="key">
+        /// Key of message or request type.
+        /// </param>
+        /// <param name="message">
+        /// Message about request. Some unsuccessful requests have message about it.
+        /// </param>
+        /// <returns>
+        /// The created Microsoft.AspNetCore.Mvc.BadRequestObjectResult for the response.
+        /// See <see cref="BadRequestResult"/>
+        /// </returns>
+        [NonAction]
+        protected virtual BadRequestObjectResult BadRequest(object error, string key, string message)
+        {
+            return base.BadRequest(new ApiResult
+            {
+                Success = false,
+                Data = error,
+                Key = key,
+                Message = message,
+                IsUserFriendlyMessage = true
             });
         }
     }
