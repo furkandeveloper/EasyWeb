@@ -208,5 +208,39 @@ namespace EasyWeb.AspNetCore.Controllers
                 Data = value
             });
         }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="uri">The URI at which the content has been created.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedResult Created(Uri uri, object value)
+        {
+            return base.Created(uri, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="uri">The URI at which the content has been created.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedResult Created(string uri, object value)
+        {
+            return base.Created(uri, new ApiResult
+            {
+                Success = true,
+                Key = "Created",
+                Data = value
+            });
+        }
     }
 }
