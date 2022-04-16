@@ -242,5 +242,47 @@ namespace EasyWeb.AspNetCore.Controllers
                 Data = value
             });
         }
+
+        /// <summary>
+        /// Creates an <see cref="OkObjectResult"/> object that produces an <see cref="StatusCodes.Status200OK"/> response.
+        /// </summary>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="OkObjectResult"/> for the response.</returns>
+        [NonAction]
+        public override OkObjectResult Ok(object value)
+        {
+            if (value == null)
+                return base.Ok(new ApiResult
+                {
+                    Success = true,
+                    Data = new object(),
+                    Message = "Data is empty",
+                    Key = "OK"
+                });
+            return base.Ok(new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "OK"
+            });
+        }
+
+        /// <summary>
+        /// Creates an <see cref="OkObjectResult"/> object that produces an <see cref="StatusCodes.Status200OK"/> response.
+        /// </summary>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <param name="meta">The content value to format in the entity meta.</param>
+        /// <returns>The created <see cref="OkObjectResult"/> for the response.</returns>
+        [NonAction]
+        protected virtual OkObjectResult Ok(object value, object meta)
+        {
+            return base.Ok(new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Meta = meta,
+                Key = "OK"
+            });
+        }
     }
 }
