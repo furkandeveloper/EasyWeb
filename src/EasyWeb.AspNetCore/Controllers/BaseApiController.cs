@@ -284,5 +284,111 @@ namespace EasyWeb.AspNetCore.Controllers
                 Key = "OK"
             });
         }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtActionResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="actionName">The name of the action to use for generating the URL.</param>
+        /// <param name="controllerName">The name of the controller to use for generating the URL.</param>
+        /// <param name="routeValues">The route data to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtActionResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtActionResult CreatedAtAction(string actionName, string controllerName, object routeValues, object value)
+        {
+            return base.CreatedAtAction(actionName, controllerName, routeValues, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtActionResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="actionName">The name of the action to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtActionResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtActionResult CreatedAtAction(string actionName, object value)
+        {
+            return base.CreatedAtAction(actionName, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtActionResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="actionName">The name of the action to use for generating the URL.</param>
+        /// <param name="routeValues">The route data to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtActionResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtActionResult CreatedAtAction(string actionName, object routeValues, object value)
+        {
+            return base.CreatedAtAction(actionName, routeValues, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtRouteResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="routeValues">The route data to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtRouteResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtRouteResult CreatedAtRoute(object routeValues, object value)
+        {
+            return base.CreatedAtRoute(routeValues, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtRouteResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="routeName">The name of the route to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtRouteResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtRouteResult CreatedAtRoute(string routeName, object value)
+        {
+            return base.CreatedAtRoute(routeName, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
+
+        /// <summary>
+        /// Creates a <see cref="CreatedAtRouteResult"/> object that produces a <see cref="StatusCodes.Status201Created"/> response.
+        /// </summary>
+        /// <param name="routeName">The name of the route to use for generating the URL.</param>
+        /// <param name="routeValues">The route data to use for generating the URL.</param>
+        /// <param name="value">The content value to format in the entity body.</param>
+        /// <returns>The created <see cref="CreatedAtRouteResult"/> for the response.</returns>
+        [NonAction]
+        public override CreatedAtRouteResult CreatedAtRoute(string routeName, object routeValues, object value)
+        {
+            return base.CreatedAtRoute(routeName, routeValues, new ApiResult
+            {
+                Success = true,
+                Data = value,
+                Key = "Created"
+            });
+        }
     }
 }
