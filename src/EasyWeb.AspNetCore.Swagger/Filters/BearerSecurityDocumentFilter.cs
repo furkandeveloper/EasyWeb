@@ -3,8 +3,20 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace EasyWeb.AspNetCore.Swagger.Filters;
 
+/// <summary>
+/// Bearer Security Document Filter for Swagger.
+/// </summary>
 public class BearerSecurityDocumentFilter : IDocumentFilter
 {
+    /// <summary>
+    /// Apply Bearer Security Document Filter
+    /// </summary>
+    /// <param name="swaggerDoc">
+    /// Open Api Document object. See <see cref="OpenApiDocument"/>
+    /// </param>
+    /// <param name="context">
+    /// Document Filter Context. See <see cref="DocumentFilterContext"/>
+    /// </param>
     public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
     {
         swaggerDoc.SecurityRequirements ??= new List<OpenApiSecurityRequirement>();
