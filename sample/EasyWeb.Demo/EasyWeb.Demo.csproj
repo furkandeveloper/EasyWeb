@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="EasyWeb.AspNetCore.Standarts" Version="1.0.0" />
+    </ItemGroup>
+
 </Project>
