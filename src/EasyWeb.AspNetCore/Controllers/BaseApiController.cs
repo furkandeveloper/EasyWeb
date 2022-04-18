@@ -1,4 +1,6 @@
-﻿using EasyWeb.Core.Models;
+﻿using System;
+using System.Linq;
+using EasyWeb.Core.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -155,7 +157,6 @@ namespace EasyWeb.AspNetCore.Controllers
                 Key = "NotFound",
                 Data = value
             });
-            return base.NotFound(value);
         }
 
         /// <summary>
@@ -172,7 +173,6 @@ namespace EasyWeb.AspNetCore.Controllers
                 Key = "Accepted",
                 Data = value
             });
-            return base.Accepted(value);
         }
 
         /// <summary>

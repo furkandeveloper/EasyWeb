@@ -1,9 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+    <Import Project="..\..\common.props" />
+
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageIcon>easy-web.png</PackageIcon>
+        <PackageId>EasyWeb.AspNetCore.Filters</PackageId>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="easy-web.png">
+            <Pack>True</Pack>
+        </None>
+    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\EasyWeb.AspNetCore\EasyWeb.AspNetCore.csproj" />

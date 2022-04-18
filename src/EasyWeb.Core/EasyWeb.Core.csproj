@@ -1,8 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-	</PropertyGroup>
+    <Import Project="..\..\common.props"/>
+    
+    <PropertyGroup>
+        <PackageIcon>easy-web.png</PackageIcon>
+        <PackageId>EasyWeb.Core</PackageId>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="easy-web.png">
+            <Pack>True</Pack>
+        </None>
+    </ItemGroup>
 
 </Project>
