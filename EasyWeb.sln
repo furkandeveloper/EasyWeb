@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeb.AspNetCore.ApiStand
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWeb.AspNetCore.Swagger", "src\EasyWeb.AspNetCore.Swagger\EasyWeb.AspNetCore.Swagger.csproj", "{25A02C1E-90BE-4F6E-8756-6A8985F1D90D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03E45719-B996-4BAF-8B9B-88C13B5BA67D}"
+	ProjectSection(SolutionItems) = preProject
+		common.props = common.props
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
