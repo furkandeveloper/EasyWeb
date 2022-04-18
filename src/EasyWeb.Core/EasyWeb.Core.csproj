@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="..\..\common.props"/>
+    <Import Project="..\..\common.props" />
     
     <PropertyGroup>
         <PackageIcon>easy-web.png</PackageIcon>
@@ -8,9 +8,6 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <None Include="easy-web.png">
-            <Pack>True</Pack>
-        </None>
+        <None Include="easy-web.png" Pack="true" PackagePath=""/>
     </ItemGroup>
-
 </Project>
