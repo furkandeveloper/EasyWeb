@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="EasyWeb.AspNetCore.Filters" Version="1.0.0" />
       <PackageReference Include="EasyWeb.AspNetCore.Standarts" Version="1.0.0" />
+      <PackageReference Include="EasyWeb.AspNetCore.Swagger" Version="1.0.0" />
     </ItemGroup>
 
 </Project>
