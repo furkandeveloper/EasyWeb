@@ -17,4 +17,8 @@
       <ProjectReference Include="..\..\src\EasyWeb.AspNetCore.Swagger\EasyWeb.AspNetCore.Swagger.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.1" />
+    </ItemGroup>
+
 </Project>
