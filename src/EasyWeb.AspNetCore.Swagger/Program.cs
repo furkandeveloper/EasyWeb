@@ -34,12 +34,12 @@ public static class Program
             var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
             foreach (var description in provider.ApiVersionDescriptions)
             {
-                var title = Configuration.Title;
+                var title = configuration.Title;
                 options.SwaggerDoc(description.GroupName, new OpenApiInfo()
                 {
                     Title = description.IsDeprecated ? title + "- [Deprecated]" : title,
                     Version = description.ApiVersion.ToString(),
-                    Description = Configuration.Description,
+                    Description = configuration.Description,
                     License = new OpenApiLicense
                     {
                         Name = "Apache 2.0",
@@ -54,28 +54,18 @@ public static class Program
             
             options.DocumentFilter<CamelCaseDocumentFilter>();
             options.DocumentFilter<BearerSecurityDocumentFilter>();
-            
-            var docFile = $"{Assembly.GetEntryAssembly()!.GetName().Name}.xml";
-            var filePath = Path.Combine(AppContext.BaseDirectory, docFile);
-
-            if (File.Exists((filePath)))
-            {
-                options.IncludeXmlComments(filePath);
-            }
         });
     }
 
     /// <summary>
     /// Apply Configuration and use for swagger
     /// </summary>
-    /// <param name="host">
-    /// A program abstraction. <see cref="IHost"/>
+    /// <param name="app">
+    /// A program abstraction. <see cref="IApplicationBuilder"/>
     /// </param>
-    public static void ApplySwaggerConfiguration(this IHost host)
+    public static void ApplySwaggerConfiguration(this IApplicationBuilder app)
     {
-        using var serviceScope = host.Services.CreateScope();
-        var app = serviceScope.ServiceProvider.GetRequiredService<IApplicationBuilder>();
-        var versioningProvider = serviceScope.ServiceProvider.GetRequiredService<IApiVersionDescriptionProvider>();
+        var versioningProvider = app.ApplicationServices.GetRequiredService<IApiVersionDescriptionProvider>();
         app.UseSwagger();
         app.UseSwaggerUI(options =>
         {
