@@ -8,10 +8,10 @@ public class Configuration
     /// <summary>
     /// Document Title
     /// </summary>
-    public static string Title => null;
+    public string Title { get; set; }
 
     /// <summary>
     /// Document Description
     /// </summary>
-    public static string Description => null;
+    public string Description { get; set; }
 }

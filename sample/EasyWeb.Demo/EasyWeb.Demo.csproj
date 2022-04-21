@@ -2,14 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+        <WarningsAsErrors>NU1605</WarningsAsErrors>
+        <NoWarn>1701;1702;1591;SA1503</NoWarn>
+    </PropertyGroup>
+
     <ItemGroup>
-      <PackageReference Include="EasyWeb.AspNetCore.Filters" Version="1.0.0" />
-      <PackageReference Include="EasyWeb.AspNetCore.Standarts" Version="1.0.0" />
-      <PackageReference Include="EasyWeb.AspNetCore.Swagger" Version="1.0.0" />
+      <ProjectReference Include="..\..\src\EasyWeb.AspNetCore.ApiStandarts\EasyWeb.AspNetCore.ApiStandarts.csproj" />
+      <ProjectReference Include="..\..\src\EasyWeb.AspNetCore.Filters\EasyWeb.AspNetCore.Filters.csproj" />
+      <ProjectReference Include="..\..\src\EasyWeb.AspNetCore.Swagger\EasyWeb.AspNetCore.Swagger.csproj" />
     </ItemGroup>
 
 </Project>
