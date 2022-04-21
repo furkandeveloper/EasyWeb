@@ -21,4 +21,10 @@
       <PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Docs\README.md">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
