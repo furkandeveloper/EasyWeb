@@ -25,4 +25,4 @@ RUN dotnet publish "EasyWeb.Demo.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "EasyWeb.Demo.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet EasyWeb.Demo.dll
