@@ -9,6 +9,9 @@
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
         <WarningsAsErrors>NU1605</WarningsAsErrors>
         <NoWarn>1701;1702;1591;SA1503</NoWarn>
+        <UserSecretsId>baed6d2a-9999-44d6-be74-e544f28e1025</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..</DockerfileContext>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,6 +22,7 @@
 
     <ItemGroup>
       <PackageReference Include="AspNetCore.MarkdownDocumenting" Version="2.3.1" />
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     </ItemGroup>
 
     <ItemGroup>
