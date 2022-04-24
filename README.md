@@ -26,7 +26,7 @@
 ***
 
 ## Give a Star 🌟
-If you liked the project or if **EasyProfiler** helped you, please give a star.
+If you liked the project or if **EasyWeb** helped you, please give a star.
 
 ***
 
@@ -42,9 +42,9 @@ and more.
 ***
 
 ### Documentation
-Visit [Wiki](https://github.com/furkandeveloper/EasyProfiler/wiki) page for documentation.
+Visit [Wiki](https://github.com/furkandeveloper/EasyWeb/wiki) page for documentation.
 
 ***
 
 ### Demo
-Visit [Live Demo](https://easy-profiler.herokuapp.com/) for sample project.
+Visit [Live Demo](https://easy-web-v1.herokuapp.com/Docs/) for sample project.
