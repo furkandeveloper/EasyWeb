@@ -42,7 +42,7 @@ and more.
 ***
 
 ### Documentation
-Visit [Wiki](https://github.com/furkandeveloper/EasyWeb/wiki) page for documentation.
+To be added...
 
 ***
 
