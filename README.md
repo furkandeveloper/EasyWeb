@@ -47,4 +47,4 @@ Visit [Wiki](https://github.com/furkandeveloper/EasyWeb/wiki) page for documenta
 ***
 
 ### Demo
-Visit [Live Demo](https://easy-web-v1.herokuapp.com/Docs/) for sample project.
+Visit [Live Demo](https://easy-web-v1.herokuapp.com/) for sample project.
