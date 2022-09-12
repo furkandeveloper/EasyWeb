@@ -48,3 +48,8 @@ Visit wiki documentation. [Wiki](https://github.com/furkandeveloper/EasyWeb/wiki
 
 ### Demo
 Visit [Live Demo](https://easy-web-v1.herokuapp.com/) for sample project.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=furkandeveloper/EasyWeb&type=Date)](https://star-history.com/#furkandeveloper/EasyWeb&Date)
+
